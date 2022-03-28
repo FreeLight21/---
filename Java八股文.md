@@ -86,7 +86,7 @@
 
    15. 操作数栈：用来保存计算过程中的中间结果。
 
-   ![image-20200706094109629](D:/Study Document/Java Learning/Java Notes/JVM/LearningNotes/JVM/1_内存与垃圾回收篇/5_虚拟机栈/images/image-20200706094109629.png)
+   ![image-20200706094109629](https://gitee.com/light21/my-picture/raw/master/img/202203282042780.png)
 
    bipush，压栈到操作数栈中，istore_1,将操作数栈顶部的元素15，存储到局部变量表中索引为1的位置，局部变量表索引为0的位置保存this的指针。
 
@@ -153,11 +153,11 @@
 
        * 句柄访问：本地变量表中保存句柄池在堆中的地址，堆中有个句柄池：1.对象实例数据的指针--》堆中，2.对象类型的数据指针——》方法区
 
-         ![image-20200709164342002](D:\Study Document\Java Learning\Java Notes\JVM\LearningNotes\JVM\1_内存与垃圾回收篇\10_对象实例化内存布局与访问定位\images\image-20200709164342002.png)
+         ![image-20200709164342002](https://gitee.com/light21/my-picture/raw/master/img/202203282042768.png)
 
        * 直接指针：本地变量表中保存时对象实例在堆中的地址，堆中的对象实例包含对象类型的数据指针，这个指针指向方法区。
 
-         ![image-20200709164350466](D:\Study Document\Java Learning\Java Notes\JVM\LearningNotes\JVM\1_内存与垃圾回收篇\10_对象实例化内存布局与访问定位\images\image-20200709164350466.png)
+         ![image-20200709164350466](https://gitee.com/light21/my-picture/raw/master/img/202203282042782.png)
 
    34. 执行引擎：1、解释器(将字节码指令逐条解释成机器相关的指令执行) 2、JIT编译器(直接将源代码编译成机器机器相关的指令)， 3、垃圾回收器。 java是一门半编译半解释型的语言。
 
@@ -234,7 +234,7 @@
 
        * 整堆收集器：G1
 
-         ![image-20200713093757644](D:\Study Document\Java Learning\Java Notes\JVM\LearningNotes\JVM\1_内存与垃圾回收篇\17_垃圾回收器\images\image-20200713093757644.png)
+         ![image-20200713093757644](https://gitee.com/light21/my-picture/raw/master/img/202203282042023.png)
 
    ### 04、框架
 
