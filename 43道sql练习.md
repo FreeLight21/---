@@ -96,7 +96,6 @@
        -> limit 1;
    ```
    
-
 7. 求平均薪水的等级最低的部门的部门名称
 
    ```sql
@@ -133,5 +132,48 @@
    mysql> select ename, sal from emp order by sal desc limit 5;
    ```
 
-   
+10. 取得薪水最高的第六到第十名员工
 
+    ```sql
+    mysql> select ename, sal from emp order by sal desc limit 5, 5;
+    //mysql的记录是从0开始的，第六就是第五条记录
+    ```
+
+11. 取得最后入职的5名员工
+
+    ```sql
+    mysql> select ename, hiredate from emp order by hiredate desc limit 5;
+    ```
+
+12. 取得每个薪水等级有多少员工
+
+    ```sql
+    mysql> select s.grade, count(s.grade) as count
+        -> from emp e
+        -> join salgrade s
+        -> on e.sal between s.losal and s.hisal
+        -> group by s.grade;
+    ```
+
+13. 有3 个表 S( 学生表 ），C （课程表 ），SC （学生选课表), S（SNO,SNAME）代表(学号，姓名)
+
+    C(CNO,CNAME,CTEACHER) 代表(课号，课名，教师)
+
+    SC(SNO,CNO,SCGRADE) 代表(学号，课号，成绩)。 
+
+    * 1问题：找出没选过“黎明”老师的所有学生姓名。
+    * 2问题：列出 2 门以上（含 2 门）不及格学生姓名及平均成绩。
+    * 3问题：即学过 1 号课程又学过 2 号课所有学生的姓名。
+
+14. 列出所有员工及领导的姓名
+
+    ```sql
+    
+    ```
+
+15. 列出受雇日期早于其直接上级的所有员工的编号,姓名,部门名称
+
+    ```sql
+    ```
+
+    
